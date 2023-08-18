@@ -1,0 +1,40 @@
+import React from 'react';
+import { useDispatch , useSelector } from 'react-redux'; 
+
+const Home = () => {
+
+    const {c} = useSelector((state)=>state.custom);
+    const dispatch = useDispatch();
+
+    const AddValue = () =>{
+        dispatch({
+            type:"AddValue",
+        })
+    }
+
+    const SubValue = () =>{
+        dispatch({
+            type:"SubValue",
+        })
+    }
+
+    const AddByValue = () =>{
+        dispatch({
+            type:"AddByValue",
+            payload:10
+        })
+    }
+  return (
+    <div>
+      
+    <h1>{c}</h1>
+
+    <button onClick={AddValue} >Add</button>
+    <button onClick={SubValue} >Sub</button>
+    <button onClick={AddByValue} >AddByValue</button>
+
+    </div>
+  )
+}
+
+export default Home

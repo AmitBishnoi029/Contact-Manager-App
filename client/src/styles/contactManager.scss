@@ -1,0 +1,126 @@
+.contact-manager{
+    width: 100%;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    >.manager{
+        width: 100%;
+        height: 30%;
+        padding: 0 0 1rem 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: linear-gradient( #8F00FF,#A32EFF);
+
+
+        >div{
+        width: 100%;
+        height: 80%;
+        padding-top: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        >h1 {
+        color: white;
+        text-align: center;
+        }
+        >button{
+        background: #ae0000;
+        border: 1px solid #ae0000;
+        width: 5rem;
+        color: #fff;
+        font-size: 1.25rem;
+        padding: 0.5rem;
+        margin: 0.5rem 0;
+        border-radius: 8px;
+        outline: none;
+        cursor: pointer;
+        // float: right;
+        justify-content: center;
+        margin-right: 2rem;
+        transition: 0.5s all;
+
+        &:hover{
+        background-color:#282c34;
+        border: #282c34;
+        transform: scale(1.1);
+        cursor: pointer;
+        }
+      }
+    }
+  }
+
+    >.contacts{
+        width: 100%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        background-color: #282c34;
+
+        >.contact-box{
+        width: 50%;
+
+            >input{
+            display: block;
+            margin-top: 1rem;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1rem;
+            border: 2px solid black ;
+            border-radius: 1rem;
+            text-align: center;
+            }
+
+            >button{
+            display: block;
+            margin: 1rem auto 1rem auto;
+            width: 4rem;
+            height: 4rem;
+            font-size: 3rem;
+            color: white;
+            background-color: #A32EFF;
+            border: 2px solid #8F00FF;
+            border-radius: 100% 100% 5% 100%;
+            transition: 0.5s all;
+
+            &:hover{
+            background-color: #8F00FF;
+            cursor: pointer;
+            box-shadow:  0 0 0.5rem 0 #555;
+            transform: scale(1.1);
+            }
+        }
+
+        >.allContacts{
+            width: 100%;
+            height: 75%;
+            padding-top: 0.5rem;
+            background-color: white;
+            // justify-content: center;
+            overflow-y: hidden;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+
+             ::-webkit-scrollbar {
+            height: 10px;
+            }
+    
+            }    
+        }
+    }
+}
+
+@media screen and (max-width:800px) {
+    .contact-manager>.contacts>.contact-box{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:350px) {
+    .contact-manager>.contacts>.contact-box{
+        width: 96%;
+    }
+}
